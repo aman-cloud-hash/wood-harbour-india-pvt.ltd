@@ -1,5 +1,13 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { supabase } from '../config/supabase';
+import { auth, googleProvider, db } from '../config/firebase';
+import { 
+  onAuthStateChanged, 
+  signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword, 
+  signOut, 
+  signInWithPopup 
+} from 'firebase/auth';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 const AuthContext = createContext({});
 
@@ -8,106 +16,88 @@ export const AuthProvider = ({ children }) => {
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Use the admin check logic
+  // Define administrators manually since Firestore might be flaky during testing
   const checkAdmin = (u, p) => {
-    const adminEmails = ['amanr_p0puhwg@gmail.com', 'admin1234@gmail.com'];
+    const adminEmails = ['amanr_p0puhwg@gmail.com', 'admin1234@gmail.com', 'admin123@gmail.com'];
     return p?.role === 'admin' || adminEmails.includes(u?.email);
   };
 
-  const fetchProfile = async (userId) => {
+  const fetchProfile = async (firebaseUser) => {
     try {
-      const { data, error } = await supabase
-        .from('users')
-        .select('*')
-        .eq('id', userId)
-        .single();
-      
-      if (data) {
-        setProfile(data);
+      if (!firebaseUser) return null;
+      const docRef = doc(db, 'users', firebaseUser.uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        return docSnap.data();
       }
+      return null;
     } catch (err) {
-      console.warn("Could not fetch user profile:", err);
+      console.warn('Firestore profile could not be loaded. Continuing without it.', err);
+      return null;
     }
   };
 
   useEffect(() => {
-    // 1. Get initial session
-    const getInitialSession = async () => {
-      try {
-        const { data: { session }, error } = await supabase.auth.getSession();
-        if (session?.user) {
-          setUser(session.user);
-          await fetchProfile(session.user.id);
-        }
-      } catch (err) {
-        console.error("Auth init error:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getInitialSession();
-
-    // 2. Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (session?.user) {
-        setUser(session.user);
-        await fetchProfile(session.user.id);
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      setUser(currentUser);
+      if (currentUser) {
+        const userProfile = await fetchProfile(currentUser);
+        setProfile(userProfile);
       } else {
-        setUser(null);
         setProfile(null);
       }
       setLoading(false);
     });
 
-    return () => {
-      subscription?.unsubscribe();
-    };
+    return unsubscribe;
   }, []);
 
   const signup = async (email, password, fullName) => {
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { full_name: fullName } }
-    });
-    
-    if (error) throw error;
-    
-    // Create profile in Supabase 'users' table
-    if (data.user) {
-      const { error: profileError } = await supabase
-        .from('users')
-        .insert([{ 
-          id: data.user.id, 
-          email, 
-          full_name: fullName, 
-          role: 'user' 
-        }]);
-      if (profileError) console.error("Profile creation error:", profileError);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    try {
+      await setDoc(doc(db, 'users', userCredential.user.uid), {
+        id: userCredential.user.uid,
+        email,
+        full_name: fullName,
+        role: 'user',
+        created_at: new Date().toISOString()
+      });
+    } catch (e) {
+      console.warn("Could not save to Firestore:", e);
     }
-    
-    return data;
+    return userCredential.user;
   };
 
   const login = async (email, password) => {
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) throw error;
-    return data;
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    return userCredential.user;
   };
 
   const loginWithGoogle = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.origin }
-    });
-    if (error) throw error;
-    return data;
+    const userCredential = await signInWithPopup(auth, googleProvider);
+    
+    // Attempt to save profile if doesn't exist
+    try {
+      const docRef = doc(db, 'users', userCredential.user.uid);
+      const docSnap = await getDoc(docRef);
+      if (!docSnap.exists()) {
+        await setDoc(docRef, {
+          id: userCredential.user.uid,
+          email: userCredential.user.email,
+          full_name: userCredential.user.displayName,
+          role: 'user',
+          created_at: new Date().toISOString()
+        });
+      }
+    } catch (e) {
+      console.warn("Google Login Firestore save skipped:", e);
+    }
+    
+    return userCredential.user;
   };
 
   const logout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) throw error;
+    await signOut(auth);
   };
 
   return (
@@ -121,7 +111,7 @@ export const AuthProvider = ({ children }) => {
       loginWithGoogle,
       isAdmin: checkAdmin(user, profile)
     }}>
-      {/* Ensure children render even if auth is failing, to avoid white screen */}
+      {/* We always render children so the UI doesn't blank out on auth error */}
       {children}
     </AuthContext.Provider>
   );
