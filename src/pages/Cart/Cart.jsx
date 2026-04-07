@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiTrash2, FiMinus, FiPlus, FiShoppingBag, FiArrowRight } from 'react-icons/fi';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
-import { formatPrice } from '../../utils/helpers';
+import { formatPrice, extractPrice } from '../../utils/helpers';
 import AuthModal from '../../components/AuthModal/AuthModal';
 import { useState } from 'react';
 import './Cart.css';
@@ -71,7 +71,7 @@ export default function Cart() {
                     <button onClick={() => updateQuantity(item.id, item.quantity + 1)}><FiPlus /></button>
                   </div>
 
-                  <span className="cart-item-total">{formatPrice(item.price * item.quantity)}</span>
+                  <span className="cart-item-total">{formatPrice(extractPrice(item.price) * item.quantity)}</span>
 
                   <button
                     className="cart-remove-btn"

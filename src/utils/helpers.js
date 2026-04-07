@@ -46,11 +46,24 @@ export function useParallax(speed = 0.5) {
 }
 
 export function formatPrice(price) {
+  if (typeof price === 'string' && (price.includes('₹') || isNaN(Number(price)))) {
+    return price;
+  }
   return new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency: 'INR',
     maximumFractionDigits: 0
   }).format(price);
+}
+
+export function extractPrice(price) {
+  if (typeof price === 'number') return price;
+  if (typeof price === 'string') {
+    // Extract numbers, ignoring currency symbols and text like /sqft
+    const parsed = parseFloat(price.replace(/[^\d.]/g, ''));
+    return isNaN(parsed) ? 0 : parsed;
+  }
+  return 0;
 }
 
 export function getDiscountPercent(original, current) {

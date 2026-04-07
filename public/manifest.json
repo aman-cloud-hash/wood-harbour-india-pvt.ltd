@@ -3,228 +3,174 @@
     "folderName": "Furniture (50 Products)",
     "files": [
       {
-        "name": "29 Wooden Kitchen Cabinets",
-        "path": "/categories/Furniture (50 Products)/29 Wooden Kitchen Cabinets.jpg"
+        "name": "0.5 mm",
+        "path": "/categories/Furniture (50 Products)/0.5 mm.png",
+        "price": 10
       },
       {
-        "name": "6 Seater Natural",
-        "path": "/categories/Furniture (50 Products)/6 Seater Natural.jpg"
+        "name": "0.8 mm",
+        "path": "/categories/Furniture (50 Products)/0.8 mm.png",
+        "price": 16
       },
       {
-        "name": "Armchairs",
-        "path": "/categories/Furniture (50 Products)/Armchairs.jpg"
+        "name": "1 mm",
+        "path": "/categories/Furniture (50 Products)/1 mm.png",
+        "price": 20
       },
       {
-        "name": "Bachelor's Chest",
-        "path": "/categories/Furniture (50 Products)/Bachelor's Chest.jpg"
+        "name": "1.2 mm",
+        "path": "/categories/Furniture (50 Products)/1.2 mm.png",
+        "price": 24
       },
       {
-        "name": "Balcony Garden",
-        "path": "/categories/Furniture (50 Products)/Balcony Garden.jpg"
+        "name": "1.5 mm",
+        "path": "/categories/Furniture (50 Products)/1.5 mm.png",
+        "price": 30
       },
       {
-        "name": "bar stool…",
-        "path": "/categories/Furniture (50 Products)/bar stool….jpg"
+        "name": "10 mm",
+        "path": "/categories/Furniture (50 Products)/10 mm.png",
+        "price": 200
       },
       {
-        "name": "beauty mirror",
-        "path": "/categories/Furniture (50 Products)/beauty mirror.jpg"
+        "name": "11 mm",
+        "path": "/categories/Furniture (50 Products)/11 mm.png",
+        "price": 220
       },
       {
-        "name": "Bed Frame with",
-        "path": "/categories/Furniture (50 Products)/Bed Frame with.jpg"
+        "name": "12 mm",
+        "path": "/categories/Furniture (50 Products)/12 mm.png",
+        "price": 240
       },
       {
-        "name": "Bunk Room Ideas for Boys",
-        "path": "/categories/Furniture (50 Products)/Bunk Room Ideas for Boys.jpg"
+        "name": "13 mm",
+        "path": "/categories/Furniture (50 Products)/13 mm.png",
+        "price": 260
       },
       {
-        "name": "Chesterfield sofa",
-        "path": "/categories/Furniture (50 Products)/Chesterfield sofa.jpg"
+        "name": "14 mm",
+        "path": "/categories/Furniture (50 Products)/14 mm.png",
+        "price": 280
       },
       {
-        "name": "child table",
-        "path": "/categories/Furniture (50 Products)/child table.jpg"
+        "name": "15 mm",
+        "path": "/categories/Furniture (50 Products)/15 mm.png",
+        "price": 300
       },
       {
-        "name": "Conference Table",
-        "path": "/categories/Furniture (50 Products)/Conference Table.jpg"
+        "name": "16 mm",
+        "path": "/categories/Furniture (50 Products)/16 mm.png",
+        "price": 320
       },
       {
-        "name": "Convertible Crib and Changer with Storage &",
-        "path": "/categories/Furniture (50 Products)/Convertible Crib and Changer with Storage &.jpg"
+        "name": "17 mm",
+        "path": "/categories/Furniture (50 Products)/17 mm.png",
+        "price": 340
       },
       {
-        "name": "Corner Bench Seating Design Ideas - Remodr",
-        "path": "/categories/Furniture (50 Products)/Corner Bench Seating Design Ideas - Remodr.jpg"
+        "name": "18 mm",
+        "path": "/categories/Furniture (50 Products)/18 mm.png",
+        "price": 360
       },
       {
-        "name": "Corner Bookshelf",
-        "path": "/categories/Furniture (50 Products)/Corner Bookshelf.jpg"
+        "name": "19 mm",
+        "path": "/categories/Furniture (50 Products)/19 mm.png",
+        "price": 380
       },
       {
-        "name": "couchette Charie",
-        "path": "/categories/Furniture (50 Products)/couchette Charie.jpg"
+        "name": "2 mm",
+        "path": "/categories/Furniture (50 Products)/2 mm.png",
+        "price": 40
       },
       {
-        "name": "Ergonomic Racing…",
-        "path": "/categories/Furniture (50 Products)/Ergonomic Racing….jpg"
+        "name": "2.5 mm",
+        "path": "/categories/Furniture (50 Products)/2.5 mm.png",
+        "price": 50
       },
       {
-        "name": "FINANCIAL OFFICE",
-        "path": "/categories/Furniture (50 Products)/FINANCIAL OFFICE.jpg"
+        "name": "20 mm",
+        "path": "/categories/Furniture (50 Products)/20 mm.png",
+        "price": 400
       },
       {
-        "name": "Floating TV Stand with…",
-        "path": "/categories/Furniture (50 Products)/Floating TV Stand with….jpg"
+        "name": "22 mm",
+        "path": "/categories/Furniture (50 Products)/22 mm.png",
+        "price": 440
       },
       {
-        "name": "Folding Murphy Table With Wall Mounted Shelf, Folding Kitchen Table, Space Saving Table, Folding Laptop Table, Wooden Balcony Table - Etsy",
-        "path": "/categories/Furniture (50 Products)/Folding Murphy Table With Wall Mounted Shelf, Folding Kitchen Table, Space Saving Table, Folding Laptop Table, Wooden Balcony Table - Etsy.jpg"
+        "name": "23 mm",
+        "path": "/categories/Furniture (50 Products)/23 mm.png",
+        "price": 460
       },
       {
-        "name": "functional office cabinet",
-        "path": "/categories/Furniture (50 Products)/functional office cabinet.jpg"
+        "name": "3 mm",
+        "path": "/categories/Furniture (50 Products)/3 mm.png",
+        "price": 60
       },
       {
-        "name": "Glass center table",
-        "path": "/categories/Furniture (50 Products)/Glass center table.jpg"
+        "name": "3.2 mm",
+        "path": "/categories/Furniture (50 Products)/3.2 mm.png",
+        "price": 64
       },
       {
-        "name": "green lounge chair -",
-        "path": "/categories/Furniture (50 Products)/green lounge chair -.jpg"
+        "name": "3.5 mm",
+        "path": "/categories/Furniture (50 Products)/3.5 mm.png",
+        "price": 70
       },
       {
-        "name": "Headboards",
-        "path": "/categories/Furniture (50 Products)/Headboards.jpg"
+        "name": "30 mm",
+        "path": "/categories/Furniture (50 Products)/30 mm.png",
+        "price": 600
       },
       {
-        "name": "HOMEFUN Folding Chairs with Cushion Padded…",
-        "path": "/categories/Furniture (50 Products)/HOMEFUN Folding Chairs with Cushion Padded….jpg"
+        "name": "35 mm",
+        "path": "/categories/Furniture (50 Products)/35 mm.png",
+        "price": 700
       },
       {
-        "name": "kid's study table",
-        "path": "/categories/Furniture (50 Products)/kid's study table.jpg"
+        "name": "4 mm",
+        "path": "/categories/Furniture (50 Products)/4 mm.png",
+        "price": 80
       },
       {
-        "name": "King size bed",
-        "path": "/categories/Furniture (50 Products)/King size bed.jpg"
+        "name": "40 mm",
+        "path": "/categories/Furniture (50 Products)/40 mm.png",
+        "price": 800
       },
       {
-        "name": "L shape sofa",
-        "path": "/categories/Furniture (50 Products)/L shape sofa.jpg"
+        "name": "45 mm",
+        "path": "/categories/Furniture (50 Products)/45 mm.png",
+        "price": 900
       },
       {
-        "name": "Modern Entryway",
-        "path": "/categories/Furniture (50 Products)/Modern Entryway.jpg"
+        "name": "5 mm",
+        "path": "/categories/Furniture (50 Products)/5 mm.png",
+        "price": 100
       },
       {
-        "name": "Office Chairs for Laptop Users",
-        "path": "/categories/Furniture (50 Products)/Office Chairs for Laptop Users.jpg"
+        "name": "50 mm",
+        "path": "/categories/Furniture (50 Products)/50 mm.png",
+        "price": 1000
       },
       {
-        "name": "Office Styles",
-        "path": "/categories/Furniture (50 Products)/Office Styles.jpg"
+        "name": "6 mm",
+        "path": "/categories/Furniture (50 Products)/6 mm.png",
+        "price": 120
       },
       {
-        "name": "Outdoor Garden",
-        "path": "/categories/Furniture (50 Products)/Outdoor Garden.jpg"
+        "name": "6.5 mm",
+        "path": "/categories/Furniture (50 Products)/6.5 mm.png",
+        "price": 130
       },
       {
-        "name": "Peled Studios - Office Snapshots",
-        "path": "/categories/Furniture (50 Products)/Peled Studios - Office Snapshots.jpg"
+        "name": "8 mm",
+        "path": "/categories/Furniture (50 Products)/8 mm.png",
+        "price": 160
       },
       {
-        "name": "Port Welshpool",
-        "path": "/categories/Furniture (50 Products)/Port Welshpool.jpg"
-      },
-      {
-        "name": "Queen Size Bed with Storage,",
-        "path": "/categories/Furniture (50 Products)/Queen Size Bed with Storage,.jpg"
-      },
-      {
-        "name": "Reception desk",
-        "path": "/categories/Furniture (50 Products)/Reception desk.jpg"
-      },
-      {
-        "name": "Recliner sofa",
-        "path": "/categories/Furniture (50 Products)/Recliner sofa.jpg"
-      },
-      {
-        "name": "Riggins Rocking Chair",
-        "path": "/categories/Furniture (50 Products)/Riggins Rocking Chair.jpg"
-      },
-      {
-        "name": "Ripley Queen Anne footstool",
-        "path": "/categories/Furniture (50 Products)/Ripley Queen Anne footstool.jpg"
-      },
-      {
-        "name": "Shoe Storage",
-        "path": "/categories/Furniture (50 Products)/Shoe Storage.jpg"
-      },
-      {
-        "name": "side table",
-        "path": "/categories/Furniture (50 Products)/side table.jpg"
-      },
-      {
-        "name": "skinniest dining set_",
-        "path": "/categories/Furniture (50 Products)/skinniest dining set_.jpg"
-      },
-      {
-        "name": "slider storageWardrobe",
-        "path": "/categories/Furniture (50 Products)/slider storageWardrobe.jpg"
-      },
-      {
-        "name": "study table",
-        "path": "/categories/Furniture (50 Products)/study table.jpg"
-      },
-      {
-        "name": "study Workspace",
-        "path": "/categories/Furniture (50 Products)/study Workspace.jpg"
-      },
-      {
-        "name": "t Solid Wood Console Table _",
-        "path": "/categories/Furniture (50 Products)/t Solid Wood Console Table _.jpg"
-      },
-      {
-        "name": "Touch_ Minimalist Decor",
-        "path": "/categories/Furniture (50 Products)/Touch_ Minimalist Decor.jpg"
-      },
-      {
-        "name": "TV unit modern",
-        "path": "/categories/Furniture (50 Products)/TV unit modern.jpg"
-      },
-      {
-        "name": "vintage wooden bar stool",
-        "path": "/categories/Furniture (50 Products)/vintage wooden bar stool.jpg"
-      },
-      {
-        "name": "Wardrobe Design Bedroom",
-        "path": "/categories/Furniture (50 Products)/Wardrobe Design Bedroom.jpg"
-      },
-      {
-        "name": "Wardrobe Design",
-        "path": "/categories/Furniture (50 Products)/Wardrobe Design.jpg"
-      },
-      {
-        "name": "wooden chair",
-        "path": "/categories/Furniture (50 Products)/wooden chair.jpg"
-      },
-      {
-        "name": "Wooden coffee table",
-        "path": "/categories/Furniture (50 Products)/Wooden coffee table.jpg"
-      },
-      {
-        "name": "Woodworking bookshell",
-        "path": "/categories/Furniture (50 Products)/Woodworking bookshell.jpg"
-      },
-      {
-        "name": "work station",
-        "path": "/categories/Furniture (50 Products)/work station.jpg"
-      },
-      {
-        "name": "Workstation Setups",
-        "path": "/categories/Furniture (50 Products)/Workstation Setups.jpg"
+        "name": "9 mm",
+        "path": "/categories/Furniture (50 Products)/9 mm.png",
+        "price": 180
       }
     ]
   },
@@ -233,155 +179,193 @@
     "files": [
       {
         "name": "#pinterest #home",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/#pinterest #home.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/#pinterest #home.jpg",
+        "price": 5127
       },
       {
         "name": "-Ring LED Pendant Light _",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/-Ring LED Pendant Light _.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/-Ring LED Pendant Light _.jpg",
+        "price": 9924
       },
       {
         "name": "16 Hanging Flower Pot Plant Ideas To Enhance Your Veranda And Home Surroundings",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/16 Hanging Flower Pot Plant Ideas To Enhance Your Veranda And Home Surroundings.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/16 Hanging Flower Pot Plant Ideas To Enhance Your Veranda And Home Surroundings.jpg",
+        "price": 7060
       },
       {
         "name": "17 Inch Acacia Wood Serving Tray With Handles, Large Wooden Tray For Ottoman,___",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/17 Inch Acacia Wood Serving Tray With Handles, Large Wooden Tray For Ottoman,___.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/17 Inch Acacia Wood Serving Tray With Handles, Large Wooden Tray For Ottoman,___.jpg",
+        "price": 5893
       },
       {
         "name": "29 Contemporary Living Room Design Ideas for a Sleek and Modern Space",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/29 Contemporary Living Room Design Ideas for a Sleek and Modern Space.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/29 Contemporary Living Room Design Ideas for a Sleek and Modern Space.jpg",
+        "price": 7168
       },
       {
         "name": "Agnes Linen Quilt _ Garnet Hill",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Agnes Linen Quilt _ Garnet Hill.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Agnes Linen Quilt _ Garnet Hill.jpg",
+        "price": 9807
       },
       {
         "name": "Area Rug",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Area Rug.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Area Rug.jpg",
+        "price": 6965
       },
       {
         "name": "Bedroom Accent Walls",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Bedroom Accent Walls.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Bedroom Accent Walls.jpg",
+        "price": 5869
       },
       {
         "name": "Bedroom lights-",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Bedroom lights-.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Bedroom lights-.jpg",
+        "price": 9019
       },
       {
         "name": "Candle's _Hot",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Candle's _Hot.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Candle's _Hot.jpg",
+        "price": 9083
       },
       {
         "name": "Chandeliers",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Chandeliers.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Chandeliers.jpg",
+        "price": 8665
       },
       {
         "name": "Clay Pots! 🏺",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Clay Pots! 🏺.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Clay Pots! 🏺.jpg",
+        "price": 8171
       },
       {
         "name": "cover pllow",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/cover pllow.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/cover pllow.jpg",
+        "price": 9138
       },
       {
         "name": "curtians",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/curtians.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/curtians.jpg",
+        "price": 7264
       },
       {
         "name": "Custom Roman Window Shades_",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Custom Roman Window Shades_.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Custom Roman Window Shades_.jpg",
+        "price": 8876
       },
       {
         "name": "Feastival in the Cotswold",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Feastival in the Cotswold.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Feastival in the Cotswold.jpg",
+        "price": 7168
       },
       {
         "name": "Floor Lamp Ideas",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Floor Lamp Ideas.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Floor Lamp Ideas.jpg",
+        "price": 8324
       },
       {
         "name": "Folded Stories – Vol_ 3",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Folded Stories – Vol_ 3.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Folded Stories – Vol_ 3.jpg",
+        "price": 8424
       },
       {
         "name": "Gallery Wall Ideas with Round Mirrors",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Gallery Wall Ideas with Round Mirrors.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Gallery Wall Ideas with Round Mirrors.jpg",
+        "price": 8253
       },
       {
         "name": "Green plant",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Green plant.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Green plant.jpg",
+        "price": 5687
       },
       {
         "name": "Handmade DIY Candlestick Holders 🛠️🕯️",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Handmade DIY Candlestick Holders 🛠️🕯️.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Handmade DIY Candlestick Holders 🛠️🕯️.jpg",
+        "price": 9142
       },
       {
         "name": "Hanging Plants",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Hanging Plants.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Hanging Plants.jpg",
+        "price": 8033
       },
       {
         "name": "Indoor Gardening",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Indoor Gardening.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Indoor Gardening.jpg",
+        "price": 6825
       },
       {
         "name": "Japanische Bushido Metallwandkunst, Samurai Bushido Wanddekor, Samurai Wandkunst, japanisches Zimmerdekor",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Japanische Bushido Metallwandkunst, Samurai Bushido Wanddekor, Samurai Wandkunst, japanisches Zimmerdekor.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Japanische Bushido Metallwandkunst, Samurai Bushido Wanddekor, Samurai Wandkunst, japanisches Zimmerdekor.jpg",
+        "price": 6067
       },
       {
         "name": "Modern Living Room Decor Ideas to Transform Your Home",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Modern Living Room Decor Ideas to Transform Your Home.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Modern Living Room Decor Ideas to Transform Your Home.jpg",
+        "price": 6216
       },
       {
         "name": "Outdoor Wind Chimes",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Outdoor Wind Chimes.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Outdoor Wind Chimes.jpg",
+        "price": 9156
       },
       {
         "name": "Papier peint 3D feuilles",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Papier peint 3D feuilles.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Papier peint 3D feuilles.jpg",
+        "price": 9459
       },
       {
         "name": "Throws for Cozy Home Decor Ideas",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Throws for Cozy Home Decor Ideas.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Throws for Cozy Home Decor Ideas.jpg",
+        "price": 7960
       },
       {
         "name": "Tile Welcome Mat",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Tile Welcome Mat.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Tile Welcome Mat.jpg",
+        "price": 5045
       },
       {
         "name": "Vase home decor, e",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Vase home decor, e.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Vase home decor, e.jpg",
+        "price": 9899
       },
       {
         "name": "wall art",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall art.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall art.jpg",
+        "price": 8419
       },
       {
         "name": "wall clock",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall clock.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall clock.jpg",
+        "price": 6967
       },
       {
         "name": "wall frames",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall frames.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/wall frames.jpg",
+        "price": 5315
       },
       {
         "name": "Wall Light 🌙 M",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Wall Light 🌙 M.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Wall Light 🌙 M.jpg",
+        "price": 7007
       },
       {
         "name": "Wall painting",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Wall painting.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/Wall painting.jpg",
+        "price": 8344
       },
       {
         "name": "White Blackout Curtains",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/White Blackout Curtains.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/White Blackout Curtains.jpg",
+        "price": 8533
       },
       {
         "name": "yellowish 💛",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/yellowish 💛.jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/yellowish 💛.jpg",
+        "price": 7076
       },
       {
         "name": "✨ Diwali_ twinkling lights, colorful…",
-        "path": "/categories/Home decor items lamps, curtains, wallpapers)/✨ Diwali_ twinkling lights, colorful….jpg"
+        "path": "/categories/Home decor items lamps, curtains, wallpapers)/✨ Diwali_ twinkling lights, colorful….jpg",
+        "price": 9623
       }
     ]
   },
@@ -390,107 +374,133 @@
     "files": [
       {
         "name": "Ambient LED Kitchen Lights",
-        "path": "/categories/Modular Kitchen (50 Products)/Ambient LED Kitchen Lights.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Ambient LED Kitchen Lights.jpg",
+        "price": 6880
       },
       {
         "name": "Anthracite Corner Base Carousel",
-        "path": "/categories/Modular Kitchen (50 Products)/Anthracite Corner Base Carousel.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Anthracite Corner Base Carousel.jpg",
+        "price": 7037
       },
       {
         "name": "Bathroom Basin Mixer",
-        "path": "/categories/Modular Kitchen (50 Products)/Bathroom Basin Mixer.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Bathroom Basin Mixer.jpg",
+        "price": 5215
       },
       {
         "name": "bottle stand",
-        "path": "/categories/Modular Kitchen (50 Products)/bottle stand.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/bottle stand.jpg",
+        "price": 5735
       },
       {
         "name": "Built-In Oven and",
-        "path": "/categories/Modular Kitchen (50 Products)/Built-In Oven and.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Built-In Oven and.jpg",
+        "price": 7607
       },
       {
         "name": "Coffee Corner Rack,",
-        "path": "/categories/Modular Kitchen (50 Products)/Coffee Corner Rack,.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Coffee Corner Rack,.jpg",
+        "price": 5178
       },
       {
         "name": "Countertop_",
-        "path": "/categories/Modular Kitchen (50 Products)/Countertop_.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Countertop_.jpg",
+        "price": 5965
       },
       {
         "name": "Dishwasher",
-        "path": "/categories/Modular Kitchen (50 Products)/Dishwasher.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Dishwasher.jpg",
+        "price": 8707
       },
       {
         "name": "Granite Countertop Milky_",
-        "path": "/categories/Modular Kitchen (50 Products)/Granite Countertop Milky_.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Granite Countertop Milky_.jpg",
+        "price": 5678
       },
       {
         "name": "Hockley Super Matt Sandstone",
-        "path": "/categories/Modular Kitchen (50 Products)/Hockley Super Matt Sandstone.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Hockley Super Matt Sandstone.jpg",
+        "price": 7830
       },
       {
         "name": "Kitchen Chimney",
-        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Chimney.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Chimney.jpg",
+        "price": 9388
       },
       {
         "name": "Kitchen Sink",
-        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Sink.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Sink.jpg",
+        "price": 6100
       },
       {
         "name": "Kitchen Storage Cabinets for Good",
-        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Storage Cabinets for Good.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Kitchen Storage Cabinets for Good.jpg",
+        "price": 5724
       },
       {
         "name": "Knife Collection",
-        "path": "/categories/Modular Kitchen (50 Products)/Knife Collection.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Knife Collection.jpg",
+        "price": 9336
       },
       {
         "name": "luxury kichen ideas 💡",
-        "path": "/categories/Modular Kitchen (50 Products)/luxury kichen ideas 💡.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/luxury kichen ideas 💡.jpg",
+        "price": 5143
       },
       {
         "name": "MARBLE TILES &",
-        "path": "/categories/Modular Kitchen (50 Products)/MARBLE TILES &.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/MARBLE TILES &.jpg",
+        "price": 9787
       },
       {
         "name": "Microwave Cooking",
-        "path": "/categories/Modular Kitchen (50 Products)/Microwave Cooking.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Microwave Cooking.jpg",
+        "price": 5020
       },
       {
         "name": "Over-Sink Dish Rack",
-        "path": "/categories/Modular Kitchen (50 Products)/Over-Sink Dish Rack.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Over-Sink Dish Rack.jpg",
+        "price": 7150
       },
       {
         "name": "Pantry",
-        "path": "/categories/Modular Kitchen (50 Products)/Pantry.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Pantry.jpg",
+        "price": 5258
       },
       {
         "name": "Produkt",
-        "path": "/categories/Modular Kitchen (50 Products)/Produkt.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Produkt.jpg",
+        "price": 8360
       },
       {
         "name": "Snug Kitchen",
-        "path": "/categories/Modular Kitchen (50 Products)/Snug Kitchen.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Snug Kitchen.jpg",
+        "price": 5719
       },
       {
         "name": "Triple Chama",
-        "path": "/categories/Modular Kitchen (50 Products)/Triple Chama.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Triple Chama.jpg",
+        "price": 5375
       },
       {
         "name": "Two Drawer Base Cabinet _ Organization",
-        "path": "/categories/Modular Kitchen (50 Products)/Two Drawer Base Cabinet _ Organization.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Two Drawer Base Cabinet _ Organization.jpg",
+        "price": 5516
       },
       {
         "name": "Wardrobe Drawer Inserts_ The Key to",
-        "path": "/categories/Modular Kitchen (50 Products)/Wardrobe Drawer Inserts_ The Key to.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/Wardrobe Drawer Inserts_ The Key to.jpg",
+        "price": 9260
       },
       {
         "name": "waredrobe for cutlery",
-        "path": "/categories/Modular Kitchen (50 Products)/waredrobe for cutlery.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/waredrobe for cutlery.jpg",
+        "price": 5446
       },
       {
         "name": "White Patina Backsplash Tile Wallpaper",
-        "path": "/categories/Modular Kitchen (50 Products)/White Patina Backsplash Tile Wallpaper.jpg"
+        "path": "/categories/Modular Kitchen (50 Products)/White Patina Backsplash Tile Wallpaper.jpg",
+        "price": 9047
       }
     ]
   },
@@ -499,179 +509,223 @@
     "files": [
       {
         "name": "Armchairs",
-        "path": "/categories/Office Interior Setup/Armchairs.jpg"
+        "path": "/categories/Office Interior Setup/Armchairs.jpg",
+        "price": 7736
       },
       {
         "name": "Cable management System S",
-        "path": "/categories/Office Interior Setup/Cable management System S.jpg"
+        "path": "/categories/Office Interior Setup/Cable management System S.jpg",
+        "price": 6129
       },
       {
         "name": "Carpet Tiles _ Transform Your Space with Stylish and Versatile Carpet Tiles for Any Room",
-        "path": "/categories/Office Interior Setup/Carpet Tiles _ Transform Your Space with Stylish and Versatile Carpet Tiles for Any Room.jpg"
+        "path": "/categories/Office Interior Setup/Carpet Tiles _ Transform Your Space with Stylish and Versatile Carpet Tiles for Any Room.jpg",
+        "price": 7375
       },
       {
         "name": "Coffee Table…",
-        "path": "/categories/Office Interior Setup/Coffee Table….jpg"
+        "path": "/categories/Office Interior Setup/Coffee Table….jpg",
+        "price": 9289
       },
       {
         "name": "Conference Table",
-        "path": "/categories/Office Interior Setup/Conference Table.jpg"
+        "path": "/categories/Office Interior Setup/Conference Table.jpg",
+        "price": 5886
       },
       {
         "name": "Coonsole tables",
-        "path": "/categories/Office Interior Setup/Coonsole tables.jpg"
+        "path": "/categories/Office Interior Setup/Coonsole tables.jpg",
+        "price": 9114
       },
       {
         "name": "cork board",
-        "path": "/categories/Office Interior Setup/cork board.jpg"
+        "path": "/categories/Office Interior Setup/cork board.jpg",
+        "price": 9488
       },
       {
         "name": "Cubicle Extender Panels",
-        "path": "/categories/Office Interior Setup/Cubicle Extender Panels.jpg"
+        "path": "/categories/Office Interior Setup/Cubicle Extender Panels.jpg",
+        "price": 7152
       },
       {
         "name": "Entryway tables",
-        "path": "/categories/Office Interior Setup/Entryway tables.jpg"
+        "path": "/categories/Office Interior Setup/Entryway tables.jpg",
+        "price": 6767
       },
       {
         "name": "False Ceiling",
-        "path": "/categories/Office Interior Setup/False Ceiling.jpg"
+        "path": "/categories/Office Interior Setup/False Ceiling.jpg",
+        "price": 9634
       },
       {
         "name": "File Cabinet",
-        "path": "/categories/Office Interior Setup/File Cabinet.jpg"
+        "path": "/categories/Office Interior Setup/File Cabinet.jpg",
+        "price": 5355
       },
       {
         "name": "Focus Pods for Busy Offices",
-        "path": "/categories/Office Interior Setup/Focus Pods for Busy Offices.jpg"
+        "path": "/categories/Office Interior Setup/Focus Pods for Busy Offices.jpg",
+        "price": 5401
       },
       {
         "name": "Headboards",
-        "path": "/categories/Office Interior Setup/Headboards.jpg"
+        "path": "/categories/Office Interior Setup/Headboards.jpg",
+        "price": 9180
       },
       {
         "name": "indoor home plant",
-        "path": "/categories/Office Interior Setup/indoor home plant.jpg"
+        "path": "/categories/Office Interior Setup/indoor home plant.jpg",
+        "price": 8488
       },
       {
         "name": "Indoor Plants",
-        "path": "/categories/Office Interior Setup/Indoor Plants.jpg"
+        "path": "/categories/Office Interior Setup/Indoor Plants.jpg",
+        "price": 9494
       },
       {
         "name": "Lato",
-        "path": "/categories/Office Interior Setup/Lato.jpg"
+        "path": "/categories/Office Interior Setup/Lato.jpg",
+        "price": 6261
       },
       {
         "name": "LED Panel 62x62 cm - Daylight",
-        "path": "/categories/Office Interior Setup/LED Panel 62x62 cm - Daylight.jpg"
+        "path": "/categories/Office Interior Setup/LED Panel 62x62 cm - Daylight.jpg",
+        "price": 6139
       },
       {
         "name": "Library Office",
-        "path": "/categories/Office Interior Setup/Library Office.jpg"
+        "path": "/categories/Office Interior Setup/Library Office.jpg",
+        "price": 6395
       },
       {
         "name": "mandir units",
-        "path": "/categories/Office Interior Setup/mandir units.jpg"
+        "path": "/categories/Office Interior Setup/mandir units.jpg",
+        "price": 8311
       },
       {
         "name": "Meeting Conference Chair",
-        "path": "/categories/Office Interior Setup/Meeting Conference Chair.jpg"
+        "path": "/categories/Office Interior Setup/Meeting Conference Chair.jpg",
+        "price": 8191
       },
       {
         "name": "meeting table",
-        "path": "/categories/Office Interior Setup/meeting table.jpg"
+        "path": "/categories/Office Interior Setup/meeting table.jpg",
+        "price": 6850
       },
       {
         "name": "MGC Bistrica_ Way-",
-        "path": "/categories/Office Interior Setup/MGC Bistrica_ Way-.jpg"
+        "path": "/categories/Office Interior Setup/MGC Bistrica_ Way-.jpg",
+        "price": 5371
       },
       {
         "name": "Motivation Focus",
-        "path": "/categories/Office Interior Setup/Motivation Focus.jpg"
+        "path": "/categories/Office Interior Setup/Motivation Focus.jpg",
+        "price": 5650
       },
       {
         "name": "Office Chairs for Laptop",
-        "path": "/categories/Office Interior Setup/Office Chairs for Laptop.jpg"
+        "path": "/categories/Office Interior Setup/Office Chairs for Laptop.jpg",
+        "price": 6800
       },
       {
         "name": "Office Sofa Ideas",
-        "path": "/categories/Office Interior Setup/Office Sofa Ideas.jpg"
+        "path": "/categories/Office Interior Setup/Office Sofa Ideas.jpg",
+        "price": 6098
       },
       {
         "name": "Outdoor furniture",
-        "path": "/categories/Office Interior Setup/Outdoor furniture.jpg"
+        "path": "/categories/Office Interior Setup/Outdoor furniture.jpg",
+        "price": 6451
       },
       {
         "name": "Privacy + Productivity_ Office Window Film Designs That Work",
-        "path": "/categories/Office Interior Setup/Privacy + Productivity_ Office Window Film Designs That Work.jpg"
+        "path": "/categories/Office Interior Setup/Privacy + Productivity_ Office Window Film Designs That Work.jpg",
+        "price": 6415
       },
       {
         "name": "Reception Bench",
-        "path": "/categories/Office Interior Setup/Reception Bench.jpg"
+        "path": "/categories/Office Interior Setup/Reception Bench.jpg",
+        "price": 9702
       },
       {
         "name": "Reception desk",
-        "path": "/categories/Office Interior Setup/Reception desk.jpg"
+        "path": "/categories/Office Interior Setup/Reception desk.jpg",
+        "price": 6878
       },
       {
         "name": "Rectangular Executive Desk",
-        "path": "/categories/Office Interior Setup/Rectangular Executive Desk.jpg"
+        "path": "/categories/Office Interior Setup/Rectangular Executive Desk.jpg",
+        "price": 6696
       },
       {
         "name": "Schrankwand Avin 4-teilig Set A",
-        "path": "/categories/Office Interior Setup/Schrankwand Avin 4-teilig Set A.jpg"
+        "path": "/categories/Office Interior Setup/Schrankwand Avin 4-teilig Set A.jpg",
+        "price": 8693
       },
       {
         "name": "Server rack stock 1",
-        "path": "/categories/Office Interior Setup/Server rack stock 1.jpg"
+        "path": "/categories/Office Interior Setup/Server rack stock 1.jpg",
+        "price": 9552
       },
       {
         "name": "Shoe cabinets",
-        "path": "/categories/Office Interior Setup/Shoe cabinets.jpg"
+        "path": "/categories/Office Interior Setup/Shoe cabinets.jpg",
+        "price": 8784
       },
       {
         "name": "Unbelievably Resilient Flooring",
-        "path": "/categories/Office Interior Setup/Unbelievably Resilient Flooring.jpg"
+        "path": "/categories/Office Interior Setup/Unbelievably Resilient Flooring.jpg",
+        "price": 6422
       },
       {
         "name": "Under Desk Printer Stand",
-        "path": "/categories/Office Interior Setup/Under Desk Printer Stand.jpg"
+        "path": "/categories/Office Interior Setup/Under Desk Printer Stand.jpg",
+        "price": 8435
       },
       {
         "name": "Versatile LED Track Lightin",
-        "path": "/categories/Office Interior Setup/Versatile LED Track Lightin.jpg"
+        "path": "/categories/Office Interior Setup/Versatile LED Track Lightin.jpg",
+        "price": 9795
       },
       {
         "name": "Wall Panels for Office",
-        "path": "/categories/Office Interior Setup/Wall Panels for Office.jpg"
+        "path": "/categories/Office Interior Setup/Wall Panels for Office.jpg",
+        "price": 8043
       },
       {
         "name": "whiteboard",
-        "path": "/categories/Office Interior Setup/whiteboard.jpg"
+        "path": "/categories/Office Interior Setup/whiteboard.jpg",
+        "price": 6027
       },
       {
         "name": "Wine racks",
-        "path": "/categories/Office Interior Setup/Wine racks.jpg"
+        "path": "/categories/Office Interior Setup/Wine racks.jpg",
+        "price": 5916
       },
       {
         "name": "wooden 2 way",
-        "path": "/categories/Office Interior Setup/wooden 2 way.jpg"
+        "path": "/categories/Office Interior Setup/wooden 2 way.jpg",
+        "price": 5590
       },
       {
         "name": "Workstation Desk",
-        "path": "/categories/Office Interior Setup/Workstation Desk.jpg"
+        "path": "/categories/Office Interior Setup/Workstation Desk.jpg",
+        "price": 9253
       },
       {
         "name": "Workstation deskk",
-        "path": "/categories/Office Interior Setup/Workstation deskk.jpg"
+        "path": "/categories/Office Interior Setup/Workstation deskk.jpg",
+        "price": 8806
       },
       {
         "name": "Writing tables",
-        "path": "/categories/Office Interior Setup/Writing tables.jpg"
+        "path": "/categories/Office Interior Setup/Writing tables.jpg",
+        "price": 6950
       },
       {
         "name": "_ Black Venetian Blinds",
-        "path": "/categories/Office Interior Setup/_ Black Venetian Blinds.jpg"
+        "path": "/categories/Office Interior Setup/_ Black Venetian Blinds.jpg",
+        "price": 8390
       }
     ]
   },
@@ -680,63 +734,78 @@
     "files": [
       {
         "name": "12 Wardrobe Design Bedroom",
-        "path": "/categories/Design & Execution Services (25 Items)/12 Wardrobe Design Bedroom.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/12 Wardrobe Design Bedroom.jpg",
+        "price": "₹12/sqft"
       },
       {
         "name": "2d",
-        "path": "/categories/Design & Execution Services (25 Items)/2d.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/2d.jpg",
+        "price": "₹7/sqft"
       },
       {
         "name": "Basic Floor Plan With Dimensions",
-        "path": "/categories/Design & Execution Services (25 Items)/Basic Floor Plan With Dimensions.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Basic Floor Plan With Dimensions.jpg",
+        "price": "₹5/sqft"
       },
       {
         "name": "electrical layout",
-        "path": "/categories/Design & Execution Services (25 Items)/electrical layout.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/electrical layout.jpg",
+        "price": "₹5/sqft"
       },
       {
         "name": "Feed _ LinkedIn",
-        "path": "/categories/Design & Execution Services (25 Items)/Feed _ LinkedIn.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Feed _ LinkedIn.jpg",
+        "price": "₹4/sqft"
       },
       {
         "name": "Finishes for Interior Design Like a Pro!",
-        "path": "/categories/Design & Execution Services (25 Items)/Finishes for Interior Design Like a Pro!.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Finishes for Interior Design Like a Pro!.jpg",
+        "price": "₹6/sqft"
       },
       {
         "name": "Lighting model and HDRI",
-        "path": "/categories/Design & Execution Services (25 Items)/Lighting model and HDRI.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Lighting model and HDRI.jpg",
+        "price": "₹4/sqft"
       },
       {
         "name": "Living room false ceiling design",
-        "path": "/categories/Design & Execution Services (25 Items)/Living room false ceiling design.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Living room false ceiling design.jpg",
+        "price": "₹10/sqft"
       },
       {
         "name": "open desk",
-        "path": "/categories/Design & Execution Services (25 Items)/open desk.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/open desk.jpg",
+        "price": "₹12/sqft"
       },
       {
         "name": "Painting serivces",
-        "path": "/categories/Design & Execution Services (25 Items)/Painting serivces.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Painting serivces.jpg",
+        "price": "₹4/sqft"
       },
       {
         "name": "services",
-        "path": "/categories/Design & Execution Services (25 Items)/services.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/services.jpg",
+        "price": "₹8/sqft"
       },
       {
         "name": "Site Supervision Works_",
-        "path": "/categories/Design & Execution Services (25 Items)/Site Supervision Works_.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Site Supervision Works_.jpg",
+        "price": "₹10/sqft"
       },
       {
         "name": "Top Turnkey Contractor",
-        "path": "/categories/Design & Execution Services (25 Items)/Top Turnkey Contractor.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Top Turnkey Contractor.jpg",
+        "price": "₹15/sqft"
       },
       {
         "name": "Transform Your Space with",
-        "path": "/categories/Design & Execution Services (25 Items)/Transform Your Space with.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/Transform Your Space with.jpg",
+        "price": "₹10/sqft"
       },
       {
         "name": "wood services",
-        "path": "/categories/Design & Execution Services (25 Items)/wood services.jpg"
+        "path": "/categories/Design & Execution Services (25 Items)/wood services.jpg",
+        "price": "₹12/sqft"
       }
     ]
   },
@@ -745,183 +814,228 @@
     "files": [
       {
         "name": "$",
-        "path": "/categories/Wooden Toys/$.jpg"
+        "path": "/categories/Wooden Toys/$.jpg",
+        "price": 2915
       },
       {
         "name": "Baby Fruit Style Soft Rubber Rattle Teether Toy Newborn Chews Food Grade Silicone Teethers Infant",
-        "path": "/categories/Wooden Toys/Baby Fruit Style Soft Rubber Rattle Teether Toy Newborn Chews Food Grade Silicone Teethers Infant.jpg"
+        "path": "/categories/Wooden Toys/Baby Fruit Style Soft Rubber Rattle Teether Toy Newborn Chews Food Grade Silicone Teethers Infant.jpg",
+        "price": 2356
       },
       {
         "name": "Ball tracker toys",
-        "path": "/categories/Wooden Toys/Ball tracker toys.jpg"
+        "path": "/categories/Wooden Toys/Ball tracker toys.jpg",
+        "price": 1694
       },
       {
         "name": "Best Baby Walkers of 2026, Tested & Reviewed",
-        "path": "/categories/Wooden Toys/Best Baby Walkers of 2026, Tested & Reviewed.jpg"
+        "path": "/categories/Wooden Toys/Best Baby Walkers of 2026, Tested & Reviewed.jpg",
+        "price": 2204
       },
       {
         "name": "Bowling Ball for Children Assorted Color Hand Eye Coordination",
-        "path": "/categories/Wooden Toys/Bowling Ball for Children Assorted Color Hand Eye Coordination.jpg"
+        "path": "/categories/Wooden Toys/Bowling Ball for Children Assorted Color Hand Eye Coordination.jpg",
+        "price": 2808
       },
       {
         "name": "Carrom Board – 32” ABC Professional Board with Stand",
-        "path": "/categories/Wooden Toys/Carrom Board – 32” ABC Professional Board with Stand.jpg"
+        "path": "/categories/Wooden Toys/Carrom Board – 32” ABC Professional Board with Stand.jpg",
+        "price": 2561
       },
       {
         "name": "Christmas Decoration Ideas",
-        "path": "/categories/Wooden Toys/Christmas Decoration Ideas.jpg"
+        "path": "/categories/Wooden Toys/Christmas Decoration Ideas.jpg",
+        "price": 1934
       },
       {
         "name": "Clock learning toy",
-        "path": "/categories/Wooden Toys/Clock learning toy.jpg"
+        "path": "/categories/Wooden Toys/Clock learning toy.jpg",
+        "price": 2261
       },
       {
         "name": "Cute decor_",
-        "path": "/categories/Wooden Toys/Cute decor_.jpg"
+        "path": "/categories/Wooden Toys/Cute decor_.jpg",
+        "price": 2601
       },
       {
         "name": "Cute Drummer Toy",
-        "path": "/categories/Wooden Toys/Cute Drummer Toy.jpg"
+        "path": "/categories/Wooden Toys/Cute Drummer Toy.jpg",
+        "price": 1843
       },
       {
         "name": "Cute Piggy Bank",
-        "path": "/categories/Wooden Toys/Cute Piggy Bank.jpg"
+        "path": "/categories/Wooden Toys/Cute Piggy Bank.jpg",
+        "price": 2440
       },
       {
         "name": "elephant pine wood toys - Google Search",
-        "path": "/categories/Wooden Toys/elephant pine wood toys - Google Search.jpg"
+        "path": "/categories/Wooden Toys/elephant pine wood toys - Google Search.jpg",
+        "price": 1132
       },
       {
         "name": "Farm Animals",
-        "path": "/categories/Wooden Toys/Farm Animals.jpg"
+        "path": "/categories/Wooden Toys/Farm Animals.jpg",
+        "price": 2069
       },
       {
         "name": "Grocery Store  _",
-        "path": "/categories/Wooden Toys/Grocery Store  _.jpg"
+        "path": "/categories/Wooden Toys/Grocery Store  _.jpg",
+        "price": 1287
       },
       {
         "name": "Handcrafted Walnut & Maple Chess Board_ 19-inch Square",
-        "path": "/categories/Wooden Toys/Handcrafted Walnut & Maple Chess Board_ 19-inch Square.jpg"
+        "path": "/categories/Wooden Toys/Handcrafted Walnut & Maple Chess Board_ 19-inch Square.jpg",
+        "price": 2731
       },
       {
         "name": "Intricate Wood Puzzle - 3D Brain Teaser Game for All Ages",
-        "path": "/categories/Wooden Toys/Intricate Wood Puzzle - 3D Brain Teaser Game for All Ages.jpg"
+        "path": "/categories/Wooden Toys/Intricate Wood Puzzle - 3D Brain Teaser Game for All Ages.jpg",
+        "price": 1307
       },
       {
         "name": "Japanese Wood Soroban Abacus, 1940s",
-        "path": "/categories/Wooden Toys/Japanese Wood Soroban Abacus, 1940s.jpg"
+        "path": "/categories/Wooden Toys/Japanese Wood Soroban Abacus, 1940s.jpg",
+        "price": 1391
       },
       {
         "name": "jcb toy",
-        "path": "/categories/Wooden Toys/jcb toy.jpg"
+        "path": "/categories/Wooden Toys/jcb toy.jpg",
+        "price": 2697
       },
       {
         "name": "Jeep Gladiator Rubicon 12V Battery Powered Ride on, 2 Seater, Children Ages 3-5, Max Spped 5 MPH, Blue - Walmart_com",
-        "path": "/categories/Wooden Toys/Jeep Gladiator Rubicon 12V Battery Powered Ride on, 2 Seater, Children Ages 3-5, Max Spped 5 MPH, Blue - Walmart_com.jpg"
+        "path": "/categories/Wooden Toys/Jeep Gladiator Rubicon 12V Battery Powered Ride on, 2 Seater, Children Ages 3-5, Max Spped 5 MPH, Blue - Walmart_com.jpg",
+        "price": 1539
       },
       {
         "name": "kids toys_",
-        "path": "/categories/Wooden Toys/kids toys_.jpg"
+        "path": "/categories/Wooden Toys/kids toys_.jpg",
+        "price": 2305
       },
       {
         "name": "Kitchen Storage Tool For kids #Toy",
-        "path": "/categories/Wooden Toys/Kitchen Storage Tool For kids #Toy.jpg"
+        "path": "/categories/Wooden Toys/Kitchen Storage Tool For kids #Toy.jpg",
+        "price": 2895
       },
       {
         "name": "kitechen set",
-        "path": "/categories/Wooden Toys/kitechen set.jpg"
+        "path": "/categories/Wooden Toys/kitechen set.jpg",
+        "price": 2153
       },
       {
         "name": "LEGO - Bricks,",
-        "path": "/categories/Wooden Toys/LEGO - Bricks,.jpg"
+        "path": "/categories/Wooden Toys/LEGO - Bricks,.jpg",
+        "price": 2760
       },
       {
         "name": "little ones, baby, nursery, kids toys, pull toy…",
-        "path": "/categories/Wooden Toys/little ones, baby, nursery, kids toys, pull toy….jpg"
+        "path": "/categories/Wooden Toys/little ones, baby, nursery, kids toys, pull toy….jpg",
+        "price": 2527
       },
       {
         "name": "Math Board_ Great idea!",
-        "path": "/categories/Wooden Toys/Math Board_ Great idea!.jpg"
+        "path": "/categories/Wooden Toys/Math Board_ Great idea!.jpg",
+        "price": 1762
       },
       {
         "name": "Memory Game Cards,",
-        "path": "/categories/Wooden Toys/Memory Game Cards,.jpg"
+        "path": "/categories/Wooden Toys/Memory Game Cards,.jpg",
+        "price": 2956
       },
       {
         "name": "mini car toy",
-        "path": "/categories/Wooden Toys/mini car toy.jpg"
+        "path": "/categories/Wooden Toys/mini car toy.jpg",
+        "price": 2942
       },
       {
         "name": "Oball Shaker Rattle Toy,",
-        "path": "/categories/Wooden Toys/Oball Shaker Rattle Toy,.jpg"
+        "path": "/categories/Wooden Toys/Oball Shaker Rattle Toy,.jpg",
+        "price": 2844
       },
       {
         "name": "Push toys",
-        "path": "/categories/Wooden Toys/Push toys.jpg"
+        "path": "/categories/Wooden Toys/Push toys.jpg",
+        "price": 2675
       },
       {
         "name": "Remote Control Helicopter For Kids",
-        "path": "/categories/Wooden Toys/Remote Control Helicopter For Kids.jpg"
+        "path": "/categories/Wooden Toys/Remote Control Helicopter For Kids.jpg",
+        "price": 1674
       },
       {
         "name": "Repair Tool Set Pretend Toy 15PCS DIY Building Kits Children Indoor Simulation wrench handsaw hammer Plastic Toy for boy at home",
-        "path": "/categories/Wooden Toys/Repair Tool Set Pretend Toy 15PCS DIY Building Kits Children Indoor Simulation wrench handsaw hammer Plastic Toy for boy at home.jpg"
+        "path": "/categories/Wooden Toys/Repair Tool Set Pretend Toy 15PCS DIY Building Kits Children Indoor Simulation wrench handsaw hammer Plastic Toy for boy at home.jpg",
+        "price": 2911
       },
       {
         "name": "Sensory letters for foundation_",
-        "path": "/categories/Wooden Toys/Sensory letters for foundation_.jpg"
+        "path": "/categories/Wooden Toys/Sensory letters for foundation_.jpg",
+        "price": 2144
       },
       {
         "name": "Shape Block Puzzle",
-        "path": "/categories/Wooden Toys/Shape Block Puzzle.jpg"
+        "path": "/categories/Wooden Toys/Shape Block Puzzle.jpg",
+        "price": 2075
       },
       {
         "name": "Shape sorters",
-        "path": "/categories/Wooden Toys/Shape sorters.jpg"
+        "path": "/categories/Wooden Toys/Shape sorters.jpg",
+        "price": 1858
       },
       {
         "name": "Shape Sorting Cube Classic Toy",
-        "path": "/categories/Wooden Toys/Shape Sorting Cube Classic Toy.jpg"
+        "path": "/categories/Wooden Toys/Shape Sorting Cube Classic Toy.jpg",
+        "price": 1413
       },
       {
         "name": "Tic-Tac-Toe - Classic Strategy Wooden Game",
-        "path": "/categories/Wooden Toys/Tic-Tac-Toe - Classic Strategy Wooden Game.jpg"
+        "path": "/categories/Wooden Toys/Tic-Tac-Toe - Classic Strategy Wooden Game.jpg",
+        "price": 2349
       },
       {
         "name": "Toy Guitar For Toddlers, Kids,",
-        "path": "/categories/Wooden Toys/Toy Guitar For Toddlers, Kids,.jpg"
+        "path": "/categories/Wooden Toys/Toy Guitar For Toddlers, Kids,.jpg",
+        "price": 2195
       },
       {
         "name": "Toy stock photo_ Image of colorful, equilibrium, wobble - 12416660",
-        "path": "/categories/Wooden Toys/Toy stock photo_ Image of colorful, equilibrium, wobble - 12416660.jpg"
+        "path": "/categories/Wooden Toys/Toy stock photo_ Image of colorful, equilibrium, wobble - 12416660.jpg",
+        "price": 1815
       },
       {
         "name": "TRADITIONAL DECOR ACCENTS",
-        "path": "/categories/Wooden Toys/TRADITIONAL DECOR ACCENTS.jpg"
+        "path": "/categories/Wooden Toys/TRADITIONAL DECOR ACCENTS.jpg",
+        "price": 1142
       },
       {
         "name": "Turn Jenga Into The Best Drinking",
-        "path": "/categories/Wooden Toys/Turn Jenga Into The Best Drinking.jpg"
+        "path": "/categories/Wooden Toys/Turn Jenga Into The Best Drinking.jpg",
+        "price": 2418
       },
       {
         "name": "Wooden dollhouse with miniature furniture",
-        "path": "/categories/Wooden Toys/Wooden dollhouse with miniature furniture.jpg"
+        "path": "/categories/Wooden Toys/Wooden dollhouse with miniature furniture.jpg",
+        "price": 1906
       },
       {
         "name": "Wooden Maze",
-        "path": "/categories/Wooden Toys/Wooden Maze.jpg"
+        "path": "/categories/Wooden Toys/Wooden Maze.jpg",
+        "price": 2668
       },
       {
         "name": "Woodlets Rainbow Stacker Toy _ Early Learning Centre",
-        "path": "/categories/Wooden Toys/Woodlets Rainbow Stacker Toy _ Early Learning Centre.jpg"
+        "path": "/categories/Wooden Toys/Woodlets Rainbow Stacker Toy _ Early Learning Centre.jpg",
+        "price": 2059
       },
       {
         "name": "Woodworking tips",
-        "path": "/categories/Wooden Toys/Woodworking tips.jpg"
+        "path": "/categories/Wooden Toys/Woodworking tips.jpg",
+        "price": 1494
       },
       {
         "name": "Xylophone",
-        "path": "/categories/Wooden Toys/Xylophone.jpg"
+        "path": "/categories/Wooden Toys/Xylophone.jpg",
+        "price": 2141
       }
     ]
   },
@@ -930,87 +1044,108 @@
     "files": [
       {
         "name": "Asthetic Book Shelf",
-        "path": "/categories/hanging product/Asthetic Book Shelf.jpg"
+        "path": "/categories/hanging product/Asthetic Book Shelf.jpg",
+        "price": 3886
       },
       {
         "name": "Backyard Hammock",
-        "path": "/categories/hanging product/Backyard Hammock.jpg"
+        "path": "/categories/hanging product/Backyard Hammock.jpg",
+        "price": 2540
       },
       {
         "name": "Boho-Dekor &",
-        "path": "/categories/hanging product/Boho-Dekor &.jpg"
+        "path": "/categories/hanging product/Boho-Dekor &.jpg",
+        "price": 5132
       },
       {
         "name": "clothes stand",
-        "path": "/categories/hanging product/clothes stand.jpg"
+        "path": "/categories/hanging product/clothes stand.jpg",
+        "price": 6397
       },
       {
         "name": "Cozy Bohemian Haven",
-        "path": "/categories/hanging product/Cozy Bohemian Haven.jpg"
+        "path": "/categories/hanging product/Cozy Bohemian Haven.jpg",
+        "price": 4816
       },
       {
         "name": "download",
-        "path": "/categories/hanging product/download.jpg"
+        "path": "/categories/hanging product/download.jpg",
+        "price": 5688
       },
       {
         "name": "Hang String Lights",
-        "path": "/categories/hanging product/Hang String Lights.jpg"
+        "path": "/categories/hanging product/Hang String Lights.jpg",
+        "price": 5097
       },
       {
         "name": "Hanging Diya With Oil",
-        "path": "/categories/hanging product/Hanging Diya With Oil.jpg"
+        "path": "/categories/hanging product/Hanging Diya With Oil.jpg",
+        "price": 5544
       },
       {
         "name": "Hanging Flower Pot Plant",
-        "path": "/categories/hanging product/Hanging Flower Pot Plant.jpg"
+        "path": "/categories/hanging product/Hanging Flower Pot Plant.jpg",
+        "price": 4985
       },
       {
         "name": "hanging frame",
-        "path": "/categories/hanging product/hanging frame.jpg"
+        "path": "/categories/hanging product/hanging frame.jpg",
+        "price": 5336
       },
       {
         "name": "Hanging Lantern Download",
-        "path": "/categories/hanging product/Hanging Lantern Download.jpg"
+        "path": "/categories/hanging product/Hanging Lantern Download.jpg",
+        "price": 4779
       },
       {
         "name": "Hanging",
-        "path": "/categories/hanging product/Hanging.jpg"
+        "path": "/categories/hanging product/Hanging.jpg",
+        "price": 6576
       },
       {
         "name": "Industrial Collections Pendant Light",
-        "path": "/categories/hanging product/Industrial Collections Pendant Light.jpg"
+        "path": "/categories/hanging product/Industrial Collections Pendant Light.jpg",
+        "price": 4472
       },
       {
         "name": "Key Holder for Wall",
-        "path": "/categories/hanging product/Key Holder for Wall.jpg"
+        "path": "/categories/hanging product/Key Holder for Wall.jpg",
+        "price": 3952
       },
       {
         "name": "Living Room Swings",
-        "path": "/categories/hanging product/Living Room Swings.jpg"
+        "path": "/categories/hanging product/Living Room Swings.jpg",
+        "price": 3139
       },
       {
         "name": "Mirrors",
-        "path": "/categories/hanging product/Mirrors.jpg"
+        "path": "/categories/hanging product/Mirrors.jpg",
+        "price": 6200
       },
       {
         "name": "Outdoor String Lights",
-        "path": "/categories/hanging product/Outdoor String Lights.jpg"
+        "path": "/categories/hanging product/Outdoor String Lights.jpg",
+        "price": 6154
       },
       {
         "name": "pendant light",
-        "path": "/categories/hanging product/pendant light.jpg"
+        "path": "/categories/hanging product/pendant light.jpg",
+        "price": 5523
       },
       {
         "name": "Rotating Swivel Ceiling Hook -",
-        "path": "/categories/hanging product/Rotating Swivel Ceiling Hook -.jpg"
+        "path": "/categories/hanging product/Rotating Swivel Ceiling Hook -.jpg",
+        "price": 3864
       },
       {
         "name": "Wind Chimes",
-        "path": "/categories/hanging product/Wind Chimes.jpg"
+        "path": "/categories/hanging product/Wind Chimes.jpg",
+        "price": 6767
       },
       {
         "name": "Wooden Ceiling",
-        "path": "/categories/hanging product/Wooden Ceiling.jpg"
+        "path": "/categories/hanging product/Wooden Ceiling.jpg",
+        "price": 4387
       }
     ]
   }

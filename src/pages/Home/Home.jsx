@@ -55,7 +55,7 @@ export default function Home() {
             id: `${slug}-${index}`,
             title: file.name.replace(/[-_]/g, ' '),
             description: `Handcrafted premium ${slug.replace('-', ' ')} product.`,
-            price: Math.floor(Math.random() * (50000 - 5000) + 5000),
+            price: file.price || Math.floor(Math.random() * (50000 - 5000) + 5000),
             category: slug,
             image: encodeURI(file.path),
             images: [encodeURI(file.path)],

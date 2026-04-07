@@ -65,7 +65,7 @@ export default function ProductDetail() {
               id: productId,
               title: file.name.replace(/[-_]/g, ' '),
               description: `Handcrafted premium ${slug.replace('-', ' ')} product. Exceptional attention to detail and traditional wood crafting techniques define this limited collection piece.`,
-              price: Math.floor(Math.random() * (50000 - 5000) + 5000),
+              price: file.price || Math.floor(Math.random() * (50000 - 5000) + 5000),
               category: slug,
               image: encodeURI(file.path),
               images: [encodeURI(file.path), encodeURI(file.path)],

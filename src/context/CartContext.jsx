@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
+import { extractPrice } from '../utils/helpers';
 
 const CartContext = createContext();
 
@@ -77,7 +78,9 @@ export function CartProvider({ children }) {
     return wishlistItems.some(item => item.id === productId);
   };
 
-  const cartTotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  const cartTotal = cartItems.reduce((total, item) => {
+    return total + (extractPrice(item.price) * item.quantity);
+  }, 0);
   const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
   const value = {
