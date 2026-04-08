@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowRight, FiTruck, FiShield, FiAward, FiRefreshCw, FiStar, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useScrollAnimation, useParallax, formatPrice } from '../../utils/helpers';
 import { categories, testimonials } from '../../data/products';
-import { productService } from '../../services/supabaseService';
+import { productService } from '../../services/dataService';
 import { useProducts } from '../../hooks/useProducts';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import SEO from '../../components/SEO';
@@ -40,45 +40,42 @@ export default function Home() {
   const [latestProducts, setLatestProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Load products from manifest.json
+  // Load products from manifest.json AND backend
   useEffect(() => {
-    const loadLocalProducts = async () => {
+    const loadAllProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/manifest.json');
-        if (!response.ok) throw new Error('Manifest not found');
-        const manifest = await response.json();
         
-        let allProducts = [];
-        Object.entries(manifest).forEach(([slug, categoryData]) => {
-          const categoryProducts = categoryData.files.map((file, index) => ({
-            id: `${slug}-${index}`,
-            title: file.name.replace(/[-_]/g, ' '),
-            description: `Handcrafted premium ${slug.replace('-', ' ')} product.`,
-            price: file.price || Math.floor(Math.random() * (50000 - 5000) + 5000),
-            category: slug,
-            image: encodeURI(file.path),
-            images: [encodeURI(file.path)],
-            is_featured: index < 2
-          }));
-          allProducts = [...allProducts, ...categoryProducts];
-        });
+        // 1. Fetch from backend
+        let backendProducts = [];
+        try {
+          backendProducts = await productService.getAllProducts();
+        } catch (err) {
+          console.warn('Backend home fetch failed', err);
+        }
 
-        // Shuffle briefly for home page variety
-        const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+        // 2. Combine and Filter
+        const allProducts = [...backendProducts];
+
         
-        setFeaturedProducts(shuffled.slice(0, 8));
-        setTrendingProducts(shuffled.slice(8, 12));
-        setLatestProducts(shuffled.slice(0, 8));
+        const featured = allProducts.filter(p => p.is_featured === true || p.is_featured === 'true').slice(0, 8);
+        const trending = allProducts.filter(p => p.is_trending === true || p.is_trending === 'true').slice(0, 4);
+        const latest = allProducts.slice(0, 8);
+
+        setFeaturedProducts(featured.length > 0 ? featured : allProducts.slice(0, 8));
+        setTrendingProducts(trending.length > 0 ? trending : allProducts.slice(8, 12));
+        setLatestProducts(latest);
+
       } catch (err) {
-        console.error('Error loading local products for Home:', err);
+        console.error('Home load error:', err);
       } finally {
         setLoading(false);
       }
     };
 
-    loadLocalProducts();
+    loadAllProducts();
   }, []);
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -264,7 +261,42 @@ export default function Home() {
         </section>
       )}
 
+      {/* ========== COLLECTION BY CATEGORY ========== */}
+      <section className="section categories-full-section" id="categories-full-section">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <h2>Browse Our Collection</h2>
+              <span className="accent-line" />
+              <p>Explore handcrafted elegance across every category</p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="categorized-collection">
+            {categories.map(cat => {
+              const catProducts = latestProducts.filter(p => p.category === cat.slug).slice(0, 4);
+              if (catProducts.length === 0) return null;
+              
+              return (
+                <div key={cat.id} className="category-row">
+                  <div className="category-row-header">
+                    <h3>{cat.name}</h3>
+                    <Link to={`/products?category=${cat.slug}`} className="view-more">View All <FiArrowRight /></Link>
+                  </div>
+                  <div className="product-grid">
+                    {catProducts.map(product => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* ========== CATEGORIES SHOWCASE ========== */}
+
       <section className="section categories-section" id="categories-section">
         <div className="container">
           <AnimatedSection>

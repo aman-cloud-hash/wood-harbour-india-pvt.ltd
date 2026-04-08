@@ -10,7 +10,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const { login, loginWithGoogle } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -22,21 +22,9 @@ export default function Login() {
       await login(email, password);
       navigate('/'); // Redirect to home on success
     } catch (err) {
-      setError(err.code === 'auth/invalid-credential' 
-        ? 'Incorrect email or password. Please try again.' 
-        : err.message
-      );
+      setError(err.message || 'Invalid login credentials');
     } finally {
       setLoading(false);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      await loginWithGoogle();
-      navigate('/');
-    } catch (err) {
-      setError('Failed to sign in with Google or account creation error.');
     }
   };
 
@@ -73,8 +61,8 @@ export default function Login() {
           <div className="form-group">
             <div className="label-flex">
               <label className="form-label">Password</label>
-              <Link to="/forgot-password" style={{ fontSize: '0.85rem', color: 'var(--color-primary)' }}>Forgot?</Link>
             </div>
+
             <div className="input-with-icon">
               <FiLock />
               <input 
@@ -93,22 +81,11 @@ export default function Login() {
           </button>
         </form>
 
-        <div className="auth-divider">
-          <span>OR CONTINUE WITH</span>
-        </div>
-
-        <button 
-          type="button" 
-          onClick={handleGoogleLogin} 
-          className="btn-google full-width"
-        >
-          <FcGoogle size={22} /> Sign in with Google
-        </button>
-
-        <p className="auth-footer text-center">
+        <p className="auth-footer text-center" style={{ marginTop: '2rem' }}>
           Don't have an account? <Link to="/signup">Create account</Link>
         </p>
       </div>
     </div>
   );
 }
+

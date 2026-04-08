@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { FiSearch, FiFilter, FiX, FiCheck, FiLoader } from 'react-icons/fi';
 import { categories } from '../../data/products';
-import { productService } from '../../services/supabaseService';
+import { productService } from '../../services/dataService';
 import { useProducts } from '../../hooks/useProducts';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import SEO from '../../components/SEO';
@@ -26,42 +26,33 @@ export default function Products() {
     if (q) setSearchQuery(q);
   }, [searchParams]);
 
-  // Load products from manifest.json
+  // Load products from manifest.json AND backend
   useEffect(() => {
-    const loadLocalProducts = async () => {
+    const loadAllProducts = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/manifest.json');
-        if (!response.ok) throw new Error('Manifest not found');
-        const manifest = await response.json();
         
-        let allProducts = [];
-        
-        // Convert manifest entries to product objects
-        Object.entries(manifest).forEach(([slug, categoryData]) => {
-          const categoryProducts = categoryData.files.map((file, index) => ({
-            id: `${slug}-${index}`,
-            title: file.name.replace(/[-_]/g, ' '),
-            description: `Handcrafted premium ${slug.replace('-', ' ')} product.`,
-            price: file.price || Math.floor(Math.random() * (50000 - 5000) + 5000), // Random price for demo
-            category: slug,
-            image: encodeURI(file.path),
-            images: [encodeURI(file.path)],
-            is_featured: index < 2
-          }));
-          allProducts = [...allProducts, ...categoryProducts];
-        });
+        // 1. Fetch from backend
+        let backendProducts = [];
+        try {
+          backendProducts = await productService.getAllProducts();
+        } catch (err) {
+          console.warn('Backend fetch failed, using local only', err);
+        }
 
-        setProducts(allProducts);
+        // 3. Merge both
+        setProducts([...backendProducts]);
+
       } catch (err) {
-        console.error('Error loading local products:', err);
+        console.error('Main load error:', err);
       } finally {
         setLoading(false);
       }
     };
 
-    loadLocalProducts();
+    loadAllProducts();
   }, []);
+
 
   const handleCategoryChange = (slug) => {
     const params = new URLSearchParams(searchParams);

@@ -83,8 +83,7 @@ export default function App() {
               },
             }}
           />
-          <Navbar />
-          <Suspense fallback={<div className="loading-state">Loading Woodharbour Experience...</div>}>
+          <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
@@ -103,10 +102,7 @@ export default function App() {
               <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
               <Route path="*" element={<Home />} />
             </Routes>
-          </Suspense>
-          <Footer />
-          <MobileBottomNav />
-          <WhatsAppButton />
+          </Layout>
         </CartProvider>
       </AuthProvider>
     </Router>

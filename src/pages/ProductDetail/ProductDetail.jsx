@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { FiHeart, FiShoppingCart, FiStar, FiTruck, FiShield, FiRefreshCw, FiMinus, FiPlus, FiChevronRight, FiLoader } from 'react-icons/fi';
-import { productService } from '../../services/supabaseService';
+import { productService } from '../../services/dataService';
 import { useCart } from '../../context/CartContext';
 import { useAuth } from '../../context/AuthContext';
 import { formatPrice, getDiscountPercent } from '../../utils/helpers';

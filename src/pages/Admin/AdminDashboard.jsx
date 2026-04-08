@@ -4,17 +4,14 @@ import {
   FiLogOut, FiBarChart2, FiBox, FiLoader, FiStar, FiTrendingUp, FiImage, FiX
 } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
-import { productService, storageService } from '../../services/supabaseService';
+import { productService, storageService } from '../../services/dataService';
 import { categories } from '../../data/products';
 import { formatPrice } from '../../utils/helpers';
 import toast from 'react-hot-toast';
+import AdminProductForm from './AdminProductForm';
 import './Admin.css';
 
-const EMPTY_FORM = {
-  title: '', category: 'furniture', price: '',
-  description: '', material: '', dimensions: '',
-  image_url: '', is_featured: false, is_trending: false,
-};
+
 
 export default function AdminDashboard() {
   const { logout, user } = useAuth();
@@ -25,17 +22,62 @@ export default function AdminDashboard() {
   const [showProductForm, setShowProductForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
+  const [filterCategory, setFilterCategory] = useState('all');
   const [togglingId, setTogglingId] = useState(null);
 
-  const [productForm, setProductForm] = useState({ ...EMPTY_FORM });
+  // Filter products locally for search and category
+  const filteredProducts = products.filter(p => {
+    const matchesSearch = p.title?.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = filterCategory === 'all' || p.category === filterCategory;
+    return matchesSearch && matchesCategory;
+  });
+
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
+  const handleSyncLocalProducts = async () => {
+    if (!window.confirm('This will import all products from manifest.json into your database. Continue?')) return;
+    
+    setBtnLoading(true);
+    let count = 0;
+    try {
+      const response = await fetch('/manifest.json');
+      const manifest = await response.json();
+      
+      for (const [slug, categoryData] of Object.entries(manifest)) {
+        for (const [index, file] of categoryData.files.entries()) {
+          const productData = {
+            title: file.name.replace(/[-_]/g, ' '),
+            description: `Handcrafted premium ${slug.replace('-', ' ')} product.`,
+            price: file.price || Math.floor(Math.random() * (50000 - 5000) + 5000),
+            category: slug,
+            image_url: encodeURI(file.path),
+            is_featured: index < 2,
+            is_trending: index % 5 === 0
+          };
+          
+          await fetch('http://localhost:3000/upload', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(productData)
+          });
+          count++;
+        }
+      }
+      toast.success(`Successfully imported ${count} products!`);
+      fetchProducts();
+    } catch (err) {
+      console.error('Sync error:', err);
+      toast.error('Sync failed');
+    } finally {
+      setBtnLoading(false);
+    }
+  };
+
   const fetchProducts = async () => {
+
     try {
       setLoading(true);
       const data = await productService.getAllProducts();
@@ -48,41 +90,10 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    setSelectedFile(file);
-    setImagePreview(URL.createObjectURL(file));
-  };
 
-  const handleProductSubmit = async (e) => {
-    e.preventDefault();
-    if (!productForm.title.trim()) return toast.error('Title is required');
-    if (!productForm.price || isNaN(productForm.price)) return toast.error('Valid price is required');
-    if (!editingProduct && !selectedFile && !productForm.image_url) return toast.error('Image is required');
 
-    setBtnLoading(true);
+  const handleSaveProduct = async (productData) => {
     try {
-      let finalImageUrl = productForm.image_url;
-
-      if (selectedFile) {
-        finalImageUrl = await storageService.uploadProductImage(selectedFile);
-      }
-
-      if (!finalImageUrl) throw new Error('Image upload failed');
-
-      const productData = {
-        title: productForm.title.trim(),
-        category: productForm.category,
-        price: Number(productForm.price),
-        description: productForm.description.trim(),
-        material: productForm.material.trim(),
-        dimensions: productForm.dimensions.trim(),
-        image_url: finalImageUrl,
-        is_featured: productForm.is_featured,
-        is_trending: productForm.is_trending,
-      };
-
       if (editingProduct) {
         await productService.updateProduct(editingProduct.id, productData);
         toast.success('Product updated successfully!');
@@ -90,22 +101,18 @@ export default function AdminDashboard() {
         await productService.addProduct(productData);
         toast.success('Product added successfully!');
       }
-
-      resetForm();
       fetchProducts();
+      setShowProductForm(false);
+      setEditingProduct(null);
     } catch (err) {
       toast.error(err.message || 'Action failed');
-    } finally {
-      setBtnLoading(false);
+      throw err; // Pass error back to form for loading state handling
     }
   };
 
-  const resetForm = () => {
+  const closeForm = () => {
     setShowProductForm(false);
     setEditingProduct(null);
-    setSelectedFile(null);
-    setImagePreview(null);
-    setProductForm({ ...EMPTY_FORM });
   };
 
   const deleteProduct = async (id, url) => {
@@ -122,19 +129,6 @@ export default function AdminDashboard() {
 
   const openEdit = (p) => {
     setEditingProduct(p);
-    setProductForm({
-      title: p.title || '',
-      category: p.category || 'furniture',
-      price: p.price || '',
-      description: p.description || '',
-      material: p.material || '',
-      dimensions: p.dimensions || '',
-      image_url: p.image_url || '',
-      is_featured: p.is_featured || false,
-      is_trending: p.is_trending || false,
-    });
-    setImagePreview(p.image_url || null);
-    setSelectedFile(null);
     setShowProductForm(true);
   };
 
@@ -163,10 +157,6 @@ export default function AdminDashboard() {
       setTogglingId(null);
     }
   };
-
-  const filteredProducts = products.filter(p =>
-    (p.title || '').toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   const adminEmail = user?.email || 'Admin';
 
@@ -198,9 +188,6 @@ export default function AdminDashboard() {
             <FiBox /><span>Products</span>
           </button>
         </nav>
-        <button className="sidebar-logout" onClick={() => logout()}>
-          <FiLogOut /><span>Logout</span>
-        </button>
       </aside>
 
       <main className="admin-main">
@@ -277,269 +264,74 @@ export default function AdminDashboard() {
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                 />
-                <button className="btn btn-primary" onClick={() => { resetForm(); setShowProductForm(true); }}>
-                  <FiPlus /> New Product
-                </button>
+                <div className="header-actions">
+                  <button 
+                    className="btn-btn-secondary" 
+                    onClick={handleSyncLocalProducts}
+                    disabled={btnLoading}
+                  >
+                    <FiPackage /> {btnLoading ? 'Syncing...' : 'Sync Stock Collection'}
+                  </button>
+                  <button className="btn-primary" onClick={() => setShowProductForm(true)}>
+                    <FiPlus /> Add Product
+                  </button>
+                </div>
               </div>
 
               {/* ===== PRODUCT FORM MODAL ===== */}
               {showProductForm && (
-                <div className="product-form-overlay">
-                  <div className="product-form-modal glass-card" style={{ maxWidth: '680px', width: '95%', maxHeight: '90vh', overflowY: 'auto' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                      <h3>{editingProduct ? 'Edit Product' : 'Add New Product'}</h3>
-                      <button onClick={resetForm} style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.5rem', color: 'var(--color-text-secondary)' }}><FiX /></button>
-                    </div>
-
-                    <form onSubmit={handleProductSubmit}>
-                      {/* Title */}
-                      <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label className="form-label">Product Title *</label>
-                        <input
-                          type="text"
-                          placeholder="e.g. Royal Teak Dining Table"
-                          value={productForm.title}
-                          onChange={e => setProductForm({ ...productForm, title: e.target.value })}
-                          required
-                          className="form-input"
-                        />
-                      </div>
-
-                      {/* Category + Price */}
-                      <div className="form-row" style={{ marginBottom: '1rem' }}>
-                        <div className="form-group">
-                          <label className="form-label">Category *</label>
-                          <select
-                            value={productForm.category}
-                            onChange={e => setProductForm({ ...productForm, category: e.target.value })}
-                            className="form-input"
-                          >
-                            {categories.map(c => <option key={c.id} value={c.slug}>{c.name}</option>)}
-                          </select>
-                        </div>
-                        <div className="form-group">
-                          <label className="form-label">Price (₹) *</label>
-                          <input
-                            type="number"
-                            placeholder="e.g. 45999"
-                            value={productForm.price}
-                            onChange={e => setProductForm({ ...productForm, price: e.target.value })}
-                            required
-                            min="0"
-                            className="form-input"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label className="form-label">Description</label>
-                        <textarea
-                          placeholder="Product description..."
-                          value={productForm.description}
-                          onChange={e => setProductForm({ ...productForm, description: e.target.value })}
-                          className="form-input"
-                          rows="3"
-                        />
-                      </div>
-
-                      {/* Material + Dimensions */}
-                      <div className="form-row" style={{ marginBottom: '1rem' }}>
-                        <div className="form-group">
-                          <label className="form-label">Material</label>
-                          <input
-                            type="text"
-                            placeholder="e.g. Premium Teak Wood"
-                            value={productForm.material}
-                            onChange={e => setProductForm({ ...productForm, material: e.target.value })}
-                            className="form-input"
-                          />
-                        </div>
-                        <div className="form-group">
-                          <label className="form-label">Dimensions</label>
-                          <input
-                            type="text"
-                            placeholder="e.g. 180cm x 90cm x 76cm"
-                            value={productForm.dimensions}
-                            onChange={e => setProductForm({ ...productForm, dimensions: e.target.value })}
-                            className="form-input"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Image Upload */}
-                      <div className="form-group" style={{ marginBottom: '1rem' }}>
-                        <label className="form-label">Product Image *</label>
-                        <div className="image-upload-section">
-                          <label className="image-upload-box" style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem', padding: '1.5rem', border: '2px dashed var(--color-accent)', borderRadius: '12px' }}>
-                            {imagePreview ? (
-                              <img src={imagePreview} alt="Preview" style={{ width: '100%', maxHeight: '160px', objectFit: 'cover', borderRadius: '8px' }} />
-                            ) : (
-                              <>
-                                <FiImage size={32} style={{ color: 'var(--color-accent)' }} />
-                                <span style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>
-                                  {selectedFile ? selectedFile.name : 'Click to choose image'}
-                                </span>
-                              </>
-                            )}
-                            <input type="file" hidden accept="image/*" onChange={handleFileChange} />
-                          </label>
-                          {imagePreview && (
-                            <button type="button" onClick={() => { setSelectedFile(null); setImagePreview(null); setProductForm({ ...productForm, image_url: '' }); }}
-                              style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--color-error)', background: 'none', border: 'none', cursor: 'pointer' }}>
-                              Remove image
-                            </button>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Featured + Trending Toggles */}
-                      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
-                        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', padding: '0.75rem 1.25rem', borderRadius: '10px', border: `2px solid ${productForm.is_featured ? '#D4A853' : 'var(--color-surface-dark)'}`, background: productForm.is_featured ? 'rgba(212,168,83,0.1)' : 'transparent', transition: 'all 0.2s', userSelect: 'none' }}>
-                          <input
-                            type="checkbox"
-                            checked={productForm.is_featured}
-                            onChange={e => setProductForm({ ...productForm, is_featured: e.target.checked })}
-                            style={{ accentColor: '#D4A853', width: '16px', height: '16px' }}
-                          />
-                          <FiStar style={{ color: productForm.is_featured ? '#D4A853' : 'var(--color-text-secondary)' }} />
-                          <span style={{ fontWeight: 600, color: productForm.is_featured ? '#B08D3A' : 'var(--color-text-secondary)' }}>Featured Product</span>
-                        </label>
-
-                        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', padding: '0.75rem 1.25rem', borderRadius: '10px', border: `2px solid ${productForm.is_trending ? '#C62828' : 'var(--color-surface-dark)'}`, background: productForm.is_trending ? 'rgba(198,40,40,0.08)' : 'transparent', transition: 'all 0.2s', userSelect: 'none' }}>
-                          <input
-                            type="checkbox"
-                            checked={productForm.is_trending}
-                            onChange={e => setProductForm({ ...productForm, is_trending: e.target.checked })}
-                            style={{ accentColor: '#C62828', width: '16px', height: '16px' }}
-                          />
-                          <FiTrendingUp style={{ color: productForm.is_trending ? '#C62828' : 'var(--color-text-secondary)' }} />
-                          <span style={{ fontWeight: 600, color: productForm.is_trending ? '#C62828' : 'var(--color-text-secondary)' }}>Trending Product</span>
-                        </label>
-                      </div>
-
-                      {/* Actions */}
-                      <div className="form-actions">
-                        <button type="button" onClick={resetForm} className="btn btn-secondary">Cancel</button>
-                        <button type="submit" disabled={btnLoading} className="btn btn-primary">
-                          {btnLoading ? <><FiLoader style={{ animation: 'spin 0.8s linear infinite' }} /> Saving...</> : (editingProduct ? 'Update Product' : 'Add Product')}
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+                <AdminProductForm 
+                  onClose={closeForm}
+                  onSave={handleSaveProduct}
+                  initialData={editingProduct}
+                />
               )}
 
-              {/* ===== PRODUCTS TABLE ===== */}
-              <div className="admin-table-wrapper">
-                <table className="admin-table">
-                  <thead>
-                    <tr>
-                      <th>Image</th>
-                      <th>Product</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th style={{ textAlign: 'center' }}>⭐ Featured</th>
-                      <th style={{ textAlign: 'center' }}>🔥 Trending</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredProducts.length === 0 ? (
-                      <tr>
-                        <td colSpan="7" style={{ textAlign: 'center', padding: '3rem', color: 'var(--color-text-secondary)' }}>
-                          {products.length === 0 ? 'No products yet. Click "+ New Product" to add one.' : 'No products match your search.'}
-                        </td>
-                      </tr>
-                    ) : filteredProducts.map(p => (
-                      <tr key={p.id}>
-                        <td>
-                          <img
-                            src={p.image_url}
-                            alt={p.title}
-                            className="table-product-img"
-                            style={{ width: '52px', height: '52px', objectFit: 'cover', borderRadius: '8px' }}
-                          />
-                        </td>
-                        <td>
-                          <div style={{ fontWeight: 600, marginBottom: '2px' }}>{p.title}</div>
-                          {p.material && <div style={{ fontSize: '0.78rem', color: 'var(--color-text-secondary)' }}>{p.material}</div>}
-                        </td>
-                        <td>
-                          <span style={{ padding: '3px 10px', borderRadius: '20px', fontSize: '0.78rem', background: 'rgba(107,66,38,0.08)', color: 'var(--color-primary)' }}>
-                            {p.category}
-                          </span>
-                        </td>
-                        <td><strong>{formatPrice(p.price)}</strong></td>
-
-                        {/* Featured Toggle */}
-                        <td style={{ textAlign: 'center' }}>
-                          <button
-                            onClick={() => handleToggleFeatured(p)}
-                            disabled={togglingId === `featured-${p.id}`}
-                            title={p.is_featured ? 'Remove from Featured' : 'Mark as Featured'}
-                            style={{
-                              padding: '5px 12px',
-                              borderRadius: '20px',
-                              border: 'none',
-                              cursor: 'pointer',
-                              fontWeight: 600,
-                              fontSize: '0.78rem',
-                              background: p.is_featured ? 'rgba(212,168,83,0.2)' : 'rgba(107,66,38,0.05)',
-                              color: p.is_featured ? '#B08D3A' : 'var(--color-text-muted)',
-                              transition: 'all 0.2s',
-                            }}
+              {/* ===== PRODUCTS GRID ===== */}
+              <div className="admin-products-grid">
+                {filteredProducts.length === 0 ? (
+                  <div className="empty-state">
+                    <FiPackage size={48} />
+                    <p>{products.length === 0 ? 'No products yet. Click "+ New Product" to add one.' : 'No products match your search.'}</p>
+                  </div>
+                ) : (
+                  filteredProducts.map(p => (
+                    <div key={p.id} className="admin-product-card glass-card">
+                      <div className="product-card-image">
+                        <img src={p.image_url} alt={p.title} loading="lazy" />
+                        <div className="product-card-badges">
+                          {p.is_featured && <span className="badge featured">Featured</span>}
+                          {p.is_trending && <span className="badge trending">Trending</span>}
+                        </div>
+                      </div>
+                      
+                      <div className="product-card-content">
+                        <div className="product-card-info">
+                          <span className="product-card-category">{p.category}</span>
+                          <h4 className="product-card-title">{p.title}</h4>
+                          <span className="product-card-price">{formatPrice(p.price)}</span>
+                        </div>
+                        
+                        <div className="product-card-actions">
+                          <button 
+                            className="btn-icon edit" 
+                            onClick={() => openEdit(p)}
+                            title="Edit Product"
                           >
-                            {togglingId === `featured-${p.id}` ? '...' : (p.is_featured ? '⭐ ON' : '☆ OFF')}
+                            <FiEdit2 /> <span>Edit</span>
                           </button>
-                        </td>
-
-                        {/* Trending Toggle */}
-                        <td style={{ textAlign: 'center' }}>
-                          <button
-                            onClick={() => handleToggleTrending(p)}
-                            disabled={togglingId === `trending-${p.id}`}
-                            title={p.is_trending ? 'Remove from Trending' : 'Mark as Trending'}
-                            style={{
-                              padding: '5px 12px',
-                              borderRadius: '20px',
-                              border: 'none',
-                              cursor: 'pointer',
-                              fontWeight: 600,
-                              fontSize: '0.78rem',
-                              background: p.is_trending ? 'rgba(198,40,40,0.1)' : 'rgba(107,66,38,0.05)',
-                              color: p.is_trending ? '#C62828' : 'var(--color-text-muted)',
-                              transition: 'all 0.2s',
-                            }}
+                          <button 
+                            className="btn-icon delete" 
+                            onClick={() => deleteProduct(p.id, p.image_url)}
+                            title="Delete Product"
                           >
-                            {togglingId === `trending-${p.id}` ? '...' : (p.is_trending ? '🔥 ON' : '— OFF')}
+                            <FiTrash2 /> <span>Delete</span>
                           </button>
-                        </td>
-
-                        <td>
-                          <div style={{ display: 'flex', gap: '0.5rem' }}>
-                            <button
-                              className="admin-action-edit"
-                              onClick={() => openEdit(p)}
-                              title="Edit"
-                              style={{ padding: '6px 12px', borderRadius: '8px', background: 'rgba(107,66,38,0.1)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--color-primary)' }}
-                            >
-                              <FiEdit2 size={14} /> Edit
-                            </button>
-                            <button
-                              className="admin-action-delete"
-                              onClick={() => deleteProduct(p.id, p.image_url)}
-                              title="Delete"
-                              style={{ padding: '6px 12px', borderRadius: '8px', background: 'rgba(198,40,40,0.1)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--color-error)' }}
-                            >
-                              <FiTrash2 size={14} /> Delete
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             </div>
           )}

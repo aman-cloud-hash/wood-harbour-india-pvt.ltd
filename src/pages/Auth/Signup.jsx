@@ -14,7 +14,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   
-  const { signup, loginWithGoogle } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
@@ -35,21 +35,9 @@ export default function Signup() {
       setSuccess(true);
       setTimeout(() => navigate('/'), 3000);
     } catch (err) {
-      setError(err.code === 'auth/email-already-in-use' 
-        ? 'This email is already in use. Please login instead.' 
-        : err.message
-      );
+      setError(err.message || 'Failed to create account');
     } finally {
       setLoading(false);
-    }
-  };
-
-  const handleGoogleSignup = async () => {
-    try {
-      await loginWithGoogle();
-      navigate('/');
-    } catch (err) {
-      setError('Failed to sign up with Google. Please try again.');
     }
   };
 
@@ -146,22 +134,11 @@ export default function Signup() {
           </button>
         </form>
 
-        <div className="auth-divider">
-          <span>OR CONTINUE WITH</span>
-        </div>
-
-        <button 
-          type="button" 
-          onClick={handleGoogleSignup} 
-          className="btn-google full-width"
-        >
-          <FcGoogle size={22} /> Sign up with Google
-        </button>
-
-        <p className="auth-footer text-center">
+        <p className="auth-footer text-center" style={{ marginTop: '2rem' }}>
           Already have an account? <Link to="/login">Login here</Link>
         </p>
       </div>
     </div>
   );
 }
+
