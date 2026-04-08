@@ -23,6 +23,8 @@ const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
 const Categories = lazy(() => import('./pages/Categories/Categories'));
 const Wishlist = lazy(() => import('./pages/Wishlist/Wishlist'));
 const Admin = lazy(() => import('./pages/Admin/Admin'));
+const AdminDashboard = lazy(() => import('./pages/Admin/AdminDashboard'));
+const AdminLogin = lazy(() => import('./pages/Admin/AdminLogin'));
 const Login = lazy(() => import('./pages/Auth/Login'));
 const Signup = lazy(() => import('./pages/Auth/Signup'));
 const Profile = lazy(() => import('./pages/Profile'));
@@ -96,6 +98,8 @@ export default function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/wishlist" element={<Wishlist />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile" element={<Profile />} />
